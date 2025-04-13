@@ -15,7 +15,7 @@ const [questions,setQuestions]=useState([]);
 
   const fetchJson=async()=>{
     
-   const dat=await fetch('https:localhost:5001/data');
+   const data=await axios.get('https://assignment-ca-monk.onrender.com/data');
 
     setQuestions(data.data.questions)
   }

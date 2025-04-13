@@ -95,16 +95,21 @@ const QuizComp = ({ data }) => {
         {i < 4 && options[i] ? (
           <button
             onClick={() => handleRemoveFromBlank(options[i])}
-            className="mx-1 text-black underline"
+            className="mx-1 text-black px-[0.75rem] py-[0.5rem] border-1 border-[#BFC6C6] rounded-xl mb-4"
           >
             {options[i]}
           </button>
         ) : (
-          i < 4 && <span className="inline-block w-24 border-b border-gray-400 mx-1"></span>
+          i < 4 && (
+            <span className="inline-block w-24 border-b border-gray-400 mx-1 mb-4">
+              ------------
+            </span>
+          )
         )}
       </React.Fragment>
     ));
   };
+  
 
   // Check if all four options are selected
   const isNextDisabled = options.length !== 4;
@@ -126,7 +131,7 @@ const QuizComp = ({ data }) => {
       <div>
         <div className='flex flex-col items-center gap-16'>
           <div>
-            <h6 className="font-[Inter] font-semibold text-[1.25rem] leading-[1.375rem] tracking-[0%] text-center text-[#616464]">
+            <h6 className="font-[Inter] font-semibold text-[1.25rem] leading-[1.375rem] tracking-[0%] text-center text-[#616464] mb-30">
               Select the missing words in the correct order
             </h6>
             <div className="text-center mt-4">
