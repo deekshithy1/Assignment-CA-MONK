@@ -15,7 +15,7 @@ const [questions,setQuestions]=useState([]);
 
   const fetchJson=async()=>{
     
-   const dat=await fetch('https://f993-2409-40f0-11d4-f56a-d1f7-2887-9a06-9f54.ngrok-free.app/data');
+   const dat=await fetch('https:localhost:5001/data');
 
     setQuestions(data.data.questions)
   }
